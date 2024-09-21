@@ -28,7 +28,7 @@ releases](https://github.com/ModOrganizer2/modorganizer/releases).  If you
 already have a copy you can use that, but it needs to be at least version
 2.5.0. To get it, scroll down the "Assets" section and grab the `7z` version, not the `exe` version:
 
-![the aseets section with the 7z archive highlighted](MO2-Download.png)
+![the aseets section with the 7z archive highlighted](images/MO2-Download.png)
 
 ### Installing Mod Organizer 2
 
@@ -45,7 +45,7 @@ I made a directory for Cyberpunk modding called `E:\Cyberpunk2077` and and
 Extract the Mod Organizer archive you downloaded into this new folder. It
 should look like this:
 
-![a properly installed MO2 folder](MO2-Installed.png)
+![a properly installed MO2 folder](images/MO2-Installed.png)
 
 Now double click `ModOrganizer.exe`:
 
@@ -121,7 +121,7 @@ To install Root Builder, first quit MO2. Then copy the rootbuilder folder
 from the zip file you downloaded into the plugins folder in MO2.  The result
 should look like this:
 
-![the rootbuilder folder after it was copied into MO2's plugins folder](rootbuilder-installed.png)
+![the rootbuilder folder after it was copied into MO2's plugins folder](images/rootbuilder-installed.png)
 
 Now you can go launch Mod Organizer 2 again.
 
@@ -129,26 +129,26 @@ Now you can go launch Mod Organizer 2 again.
 
 We'll be back here several times across the modlist, but start with we'll hide some things you won't need. Start by clicking on the drop down list of executables that's next to the Run button.
 
-![the mod organizer list of executables, with the Cyberpunk icon and labeled "Cyberpunk 2077"](exec-options.png)
+![the mod organizer list of executables, with the Cyberpunk icon and labeled "Cyberpunk 2077"](images/exec-options.png)
 
 
 Pick "<Edit...> to get the configuration dialog. For the first two entries, "Cyberpunk 2077" and "Cyberpunk 2077 - skip REDmod deploy" check "Hide in user interface". 
 
-![highlighting Cyberpunk 2077 exeuctables and hide in user interface checkbox](hide-exec.png)
+![highlighting Cyberpunk 2077 exeuctables and hide in user interface checkbox](images/hide-exec.png)
 
 Next, go to REDprelauncher and click the green up air to move it up one.
 
-![highlighting the "move executable up in list" button](exec-move.png)
+![highlighting the "move executable up in list" button](images/exec-move.png)
 
 Now you can close this by clicking "OK".
 
 Now we'll add a button to make launching it easier. Just below the Run button is a Shortcut button. Click that and pick "Toolbar and Menu".
 
-![highlighted the Toolbar and Mennu option on the shortcut button](toolbar-and-menu.png)
+![highlighted the Toolbar and Mennu option on the shortcut button](images/toolbar-and-menu.png)
 
 That'll add a button to your toolbar like this:
 
-![highlighted REDprelauncher button on the toolbar](toolbar-button.png)
+![highlighted REDprelauncher button on the toolbar](images/toolbar-button.png)
 
 You'll launch the game using this button. Both it and the "Cyberpunk 2077" will automatically run the REDMod deploy step if its needed. The launcher has the advantage of giving a progress indicator for the deploy and a better notification if that fails.
 
@@ -181,11 +181,11 @@ https://www.nexusmods.com/cyberpunk2077/mods/5266?tab=posts#comment-115260428
 ### Modding Tools
 
 
-![the context submenu with "Create separator above" option selected](create-sep.png)
+![the context submenu with "Create separator above" option selected](images/create-sep.png)
 
 We'll call this first separator "Modding Tools".
 
-![the "Modding Tools" separator after it's created](create-sep-modding-tools.png)
+![the "Modding Tools" separator after it's created](images/create-sep-modding-tools.png)
 
 Tools and other things that live outside of the game's modding ecosystem are the most complicated things to install, so it'll get easier from here. All of the mods in this section are optional, and you can run without them, but they're very handy to have around if you run into issues.
 
@@ -196,19 +196,19 @@ Tools and other things that live outside of the game's modding ecosystem are the
 To install this:
 
 1. Click the link above to open the Nexus page for the mod.
-2. If you're a premium Nexus subscriber, click the "Vortex" buttonOn the Nexus page, click "Vortex" to download the mod into Mod Organizer. ![the Vortex button on the Archive Conflict Checker Tool Page, circled](nexus-top-level-vortex.png)
-3. If you're not a premium Nexus subscriber, you'll have to click "Manual" instead, and then find your Mod Organizer downloads folder. When it finishes downloading, go to Mod Organizer and click the Downloads tab. If you don't see our download, click Refresh. Your download will be ther with a caution symbol next to it. Right click it and pick Query Info. After a moment the caution symbol will vanish and it will look the same as it does for premium users. ![circled Downloads tab, Refresh button and Query info option on the context menu](query-info.png)
+2. If you're a premium Nexus subscriber, click the "Vortex" buttonOn the Nexus page, click "Vortex" to download the mod into Mod Organizer. ![the Vortex button on the Archive Conflict Checker Tool Page, circled](images/nexus-top-level-vortex.png)
+3. If you're not a premium Nexus subscriber, you'll have to click "Manual" instead, and then find your Mod Organizer downloads folder. When it finishes downloading, go to Mod Organizer and click the Downloads tab. If you don't see our download, click Refresh. Your download will be ther with a caution symbol next to it. Right click it and pick Query Info. After a moment the caution symbol will vanish and it will look the same as it does for premium users. ![circled Downloads tab, Refresh button and Query info option on the context menu](images/query-info.png)
 4. Click on the Downloads tab (if it's not already selected) and then double click the red4-conflicts download to install it.
 5. Mod Organizer will tell you it doesn't think the mod looks valid. That's because it's just an executable and does not include any assets used by Cyberpunk directly. Click the red x to close the warning messages, then click "OK". Mod Organizer will tell you that "The mod was probably not set up correctly" -- in this case, it's wrong, so just click "Ignore".
-6. Right click the newly installed "Archive Conflict Checker Tool" and go down to "Open in Explorer". ![Circled Open in Explorer option on a mod context menu](open-in-explorer.png)
+6. Right click the newly installed "Archive Conflict Checker Tool" and go down to "Open in Explorer". ![Circled Open in Explorer option on a mod context menu](images/open-in-explorer.png)
 7. In the newly opened Explorer window, create a new folder (I use Ctrl-Shift-N to do this) and name it Tools.
 8. Move red4-conflicts.exe into the just created Tools folder. (I just drag it there.)
 9. Close the Explorer window and return to Mod Organizer.
-10. Right click the mod and pick "Ignore missing data". This tells Mod Organizer that the mod is installed correctly. This is only necessary because this is not a mod, per se. ![Ignore missing data on the mod context menu](ignore-missing-data.png)
-11. Check the checkbox next to the mod name to activate it. ![circled activation checkbox](activation-checkbox.png)
-12. Click on the drop down next to "Run" again and pick "<Edit...>". ![](exec-edit.png)
-13. Click the `+` button and then "Add from file". ![](add-exec.png)
-14. Navigate to your Mod Organizer folder and then to `mods`. ![](add-exec-mo2-mods.png)
+10. Right click the mod and pick "Ignore missing data". This tells Mod Organizer that the mod is installed correctly. This is only necessary because this is not a mod, per se. ![Ignore missing data on the mod context menu](images/ignore-missing-data.png)
+11. Check the checkbox next to the mod name to activate it. ![circled activation checkbox](images/activation-checkbox.png)
+12. Click on the drop down next to "Run" again and pick "<Edit...>". ![](images/exec-edit.png)
+13. Click the `+` button and then "Add from file". ![](images/add-exec.png)
+14. Navigate to your Mod Organizer folder and then to `mods`. ![](images/add-exec-mo2-mods.png)
 15. Inside the mods folder you'll see "Modding Tools_separator" (Mod Organizer represents separators as empty mods ending in the `_separator`) and "Archive Conflict Checker Tool". Navigate into the latter.
 16. Next you'll see the Tools folder, go into that and we'll see our `red4-conflicts.exe`. Select that and click "Open" on the dialog box.
 17. You can now click "OK" and close this out. 
@@ -253,11 +253,11 @@ however, if it does, you'll need to delete its cache and backup.  To do
 that, go to the puzzle pieces icon (next to the settings icon on the
 toolbar) and pick "Root Builder" from the menu. 
 
-![the Root Builder menu option](rootbuilder-menu.png)
+![the Root Builder menu option](images/rootbuilder-menu.png)
 
 Then down at the Bottom next to Backup and Cache click "Delete".
 
-![the Root Builder delete action](rootbuilder-delete.png)
+![the Root Builder delete action](images/rootbuilder-delete.png)
 
 -->
 
