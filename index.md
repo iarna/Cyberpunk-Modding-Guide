@@ -152,42 +152,114 @@ That'll add a button to your toolbar like this:
 
 You'll launch the game using this button. Both it and the "Cyberpunk 2077" will automatically run the REDMod deploy step if its needed. The launcher has the advantage of giving a progress indicator for the deploy and a better notification if that fails.
 
-Try it now, after it opens, go ahead and close it -- no need to launch the game itself just yet.
-
 ### Launching the Launcher
 
-To validate that things are setup right, try launching the game by clicking
-the toolbar button above.  We're not ready to play the game yet, so just
-close the launcher after it starts.
+Try it now, after it opens, go ahead and close it -- no need to launch the game itself just yet.
 
-Launching the game created some files which are now found in Overwrite. You
-can tell, because Overwrite is now red.  We're going to move those files out
-of Overwrite and into a local mod.
+To validate that things are setup right, try launching the game by clicking
+the toolbar button above. After it launches, make sure that mods are enabled. To do that, click on the gear. If the "Enable mods" switch is gray, click it to slide it to the right and turn it green:
+
+![](images/launcher-enable-mods.png)
+
+We're not ready to play the game yet, so we're done with the launcher, just close the window.
+
+Starting the launcher created some files which are now found in Overwrite. You can tell, because Overwrite is now red.  We're going to move those files out of Overwrite and into a local mod.
 
 ### Creating a Separator
 
 We'll create a lot of separators over the course of the modlist. They help
 us organize our mods by creating logical blocks.  To create the separator,
-right click on Overwrite and pick "All mods" from the menu, and then "Create
+right click on Overwrite and pick "All Mods" from the menu, and then "Create
 separator above".  (This menu option is available when you right click on
-any mod or on "Overwrite".)
+any mod or on "Overwrite".) For a name, call it "Runtime Output".
+
+![the context submenu with "Create separator above" highlighted](images/create-sep.png)
+
+### Creating an Empty Mod
+
+We use empty mods to hold some of the runtime output from the game and to hold configuration files. To create an empty mod, right click on Overwrite, pick "All Mods", and then "Create empty mod above". Give it the name "Game Cache"
+
+![the context submenu with "Create empty mod above" highlighted](images/create-mod.png)
+
+### Moving Overwrite
+
+Hold down the control key while clicking on the "Game Cache" and "Overwrite". Then right click on "Overwrite" and pick "Open in Explorer".
+
+![the context menu with "Open in Explorer" highlighted](images/open-in-explorer.png)
+
+This will open two new explorer windows:
+
+![](images/overwrite-to-game-cache.png)
+
+Drag the contents of Overwrite into Game Cache, then close the Explorer windows.
+
+Because we made changes outside of MO2 it needs to be told to go find those changes. Go the smaller Wrench and Screwdriver icon and select "Refresh."
+
+![](images/refresh-modlist.png)
+
+You'll notice that "Game Cache" will no longer be italicized and "Overwrite" will no longer be red.
+
+### Enabling the Mod
+
+Just click the checkbox next to "Game Cache".
+
+![](images/enable-mod.png)
+
+### Updating DLSS
+
+If you aren't using an Nvidia card, skip this section.
+
+Specific versions of the DLSS libraries are known to work better These versions are taken from the recommendations of the
+[Ultra Plus](https://www.nexusmods.com/cyberpunk2077/mods/10490?tab=posts#comment-129820406) mod:
+
+* Download DLSS 3.7.20 from here: [techpowerup.com/.../nvidia-dlss-dll](https://www.techpowerup.com/download/nvidia-dlss-dll/)
+* Download DLSSD 3.7.0 from here: [techpowerup.com/.../nvidia-dlss-3-ray-reconstruction-dll](https://www.techpowerup.com/download/nvidia-dlss-3-ray-reconstruction-dll/) (specificaly .0, dot releases have issues with Cyberpunk)
+* Download DLSSG 3.7.10 from here: [techpowerup.com/.../nvidia-dlss-3-frame-generation-dll](https://www.techpowerup.com/download/nvidia-dlss-3-frame-generation-dll/)
+
+Save these in your MO2 downloads folder. If they don't show up in the Downloads tab in MO2, click the Refresh button:
+
+![](images/refresh-downloads.png)
+
+Create a separator called "DLL Updates".
+
+Double click "nvngx_dlss_3.7.20.zip" to start installing it. 
+
+![](images/install-nvngx_dlss.png)
+
+MO2 will warn you that the mod doesn't look valid. It's not a mod, so that isn't surprising -- we'll fix it ourselves.
+The name has an extra underscore (`_`) at the end, delete that and click OK.
+
+MO2 will then warn you again that the "mod was probably not setup correctly", hit Ignore.
+
+Because this is a not a mod downloaded from Nexus, it won't know what version it is, instead it will put today's date in the version field. It's not necessary that we fix this, but it can save headaches later on if you're not sure what version you installed, so let's fix that. Double the version -- it will open up a panel with info about the mod, with the tab with the version already selected:
+
+![](images/change-version.png)
 
 
-## Installing Mods
+Fill in the version -- in this case, 3.7.20. Then close the pop up.
 
-Enabling redmod
-https://www.nexusmods.com/cyberpunk2077/mods/5266?tab=posts#comment-115260428
+Now, to fix the mod:
+1. Right click it and pick "Open in Explorer".
+2. Cut the DLL file (by selecting it and pressing Ctrl-X or right clicking and picking cut from the menu.) 
+3. Create a new folder called "Root" (either with Ctrl-Shift-N, or right clicking and picking New->Folder.) Navigate into it by double clicking it.
+4. Create a new folder named "bin" and navigate into it.
+5. Create a new folder named "x64" and navigate into it.
+6. Paste either with Ctrl-V or right clicking and picking "Paste."
+7. The resulting folder structure will look like:<br>
+   ![](images/folder-structure-nvngx_dlss.png)
+8. Close your explorer window. 
+9. Refresh your modlist.
+10. Enable the mod.
+
+Do the same for "nvngx_dlssd_3.7.0.zip" and "nvngx_dlssg_3.7.10.zip".
+
+
+## Base Mods
+
 
 ### Modding Tools
 
-
-![the context submenu with "Create separator above" option selected](images/create-sep.png)
-
-We'll call this first separator "Modding Tools".
-
-![the "Modding Tools" separator after it's created](images/create-sep-modding-tools.png)
-
-Tools and other things that live outside of the game's modding ecosystem are the most complicated things to install, so it'll get easier from here. All of the mods in this section are optional, and you can run without them, but they're very handy to have around if you run into issues.
+Create a new separator called "Modding Tools". Tools and other things that live outside of the game's modding ecosystem are the most complicated things to install, so it'll get easier from here. All of the mods in this section are optional, and you can run without them, but they're very handy to have around if you run into issues.
 
 #### Installing first mod
 
@@ -196,7 +268,7 @@ Tools and other things that live outside of the game's modding ecosystem are the
 To install this:
 
 1. Click the link above to open the Nexus page for the mod.
-2. If you're a premium Nexus subscriber, click the "Vortex" buttonOn the Nexus page, click "Vortex" to download the mod into Mod Organizer. ![the Vortex button on the Archive Conflict Checker Tool Page, circled](images/nexus-top-level-vortex.png)
+2. If you're a premium Nexus subscriber, click the "Vortex" buttonOn the Nexus page, click "Vortex" to download the mod into Mod Organizer.<br>![the Vortex button on the Archive Conflict Checker Tool Page, circled](images/nexus-top-level-vortex.png)
 3. If you're not a premium Nexus subscriber, you'll have to click "Manual" instead, and then find your Mod Organizer downloads folder. When it finishes downloading, go to Mod Organizer and click the Downloads tab. If you don't see our download, click Refresh. Your download will be ther with a caution symbol next to it. Right click it and pick Query Info. After a moment the caution symbol will vanish and it will look the same as it does for premium users. ![circled Downloads tab, Refresh button and Query info option on the context menu](images/query-info.png)
 4. Click on the Downloads tab (if it's not already selected) and then double click the red4-conflicts download to install it.
 5. Mod Organizer will tell you it doesn't think the mod looks valid. That's because it's just an executable and does not include any assets used by Cyberpunk directly. Click the red x to close the warning messages, then click "OK". Mod Organizer will tell you that "The mod was probably not set up correctly" -- in this case, it's wrong, so just click "Ignore".
@@ -221,16 +293,6 @@ The mod is now active and usable. The first time you launch it it will need to b
 
 * [WolvenKit](https://www.nexusmods.com/cyberpunk2077/mods/2201?tab=files) _(8.14)_ - WolvenKit is the primary mod development tool. This one only has manual downloads, so click over to Files and download the version from "Main Files" (that is, you don't want the installer version).  Once again, Mod Organizer will warn you that this doesn't look like a mod. And as before, open it up after you install it, make a `Tools` folder and a `WolvenKit` folder inside that.
 
-#### DLL Updates
-
-If you have an nvidia card, downloading specific versions of DLSS will help. These versions are taken from the recommendations of the
-[Ultra Plus](https://www.nexusmods.com/cyberpunk2077/mods/10490?tab=posts#comment-129820406):
-
-* Download DLSS 3.7.20 from here: [techpowerup.com/.../nvidia-dlss-dll](https://www.techpowerup.com/download/nvidia-dlss-dll/)
-* Download DLSSD 3.7.0 from here: [techpowerup.com/.../nvidia-dlss-3-ray-reconstruction-dll](https://www.techpowerup.com/download/nvidia-dlss-3-ray-reconstruction-dll/) (specificaly .0, dot releases have issues with Cyberpunk)
-* Download DLSSG 3.7.10 from here: [techpowerup.com/.../nvidia-dlss-3-frame-generation-dll](https://www.techpowerup.com/download/nvidia-dlss-3-frame-generation-dll/)
-
-Save these in your MO2 downloads folder.
 
 <!--
 
