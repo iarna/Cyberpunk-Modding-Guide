@@ -232,8 +232,10 @@ If you have an nvidia card, downloading specific versions of DLSS will help. The
 
 Save these in your MO2 downloads folder.
 
+<!--
 
 //preset C, Force Auto-exposure: true, Resolution Offset: 0)
+
 
 
 ####################
@@ -257,6 +259,8 @@ Then down at the Bottom next to Backup and Cache click "Delete".
 
 ![the Root Builder delete action](rootbuilder-delete.png)
 
+-->
+
 ## Playing the Game
 
 ### Hints
@@ -268,7 +272,7 @@ Then down at the Bottom next to Backup and Cache click "Delete".
      charge them, that is, hold down the fire button, after a moment they'll
      penetrate cover.  Tech sniper rifles combined with the ability to see through walls is unstoppable.
   2. Power weapons, with cyberware, can ricochet their shots. You'll see a preview as a line showing where your shot would go.
-  3. Smart weapons require cyberware -- they auto aim at anyone in their very large reticule. Once locked on, the bullets can change route in flight, including going around corners. Often it's beneficial to shoot above your enemies so that, should they go back behind cover, the bullets can still hit them as they angle down.
+  3. Smart weapons require cyberware -- they auto aim at anyone in their very large reticule. Once locked on, the bullets can change route in flight, including going around corners or down after clearing obsticals.
 * Power weapons with cyberware can ricochet their shots. This'll show up as
   a line colored red or green if you'll miss or hit respectively.
 
